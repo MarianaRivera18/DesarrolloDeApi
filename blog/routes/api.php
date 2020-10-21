@@ -19,3 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("/tiendas/{id?}","Api\TiendasController@index")->where("id","[0-9]+");
+
+Route::post("/tiendas","Api\TiendasController@guardar");
+
+Route::put("/tienda/{id?}","Api\TiendasController@actualizar");
+
+Route::delete("/tienda/{id?}","Api\TiendasController@eliminar");
