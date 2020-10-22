@@ -22,6 +22,6 @@ Route::get("/tiendas/{id?}","Api\TiendasController@index")->where("id","[0-9]+")
 
 Route::post("/tiendas","Api\TiendasController@guardar");
 
-Route::put("/tienda/{id?}","Api\TiendasController@actualizar");
+Route::get("/tiendas/{id?}/{nombre?}","Api\TiendasController@editar");
 
-Route::delete("/tienda/{id?}","Api\TiendasController@eliminar");
+Route::delete("/tiendas/{id?}","Api\TiendasController@eliminar");

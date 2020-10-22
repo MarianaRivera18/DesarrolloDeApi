@@ -26,5 +26,20 @@ class TiendasSeeder extends Seeder
 
 
         ]);
+        DB::table('descripciones')->insert([
+
+            [
+                'descripscion'=>'grande'
+            ],
+            [
+                'descripcion'=>'grande'
+            ],
+            [
+                'descripcion'=>'grande'
+            ],
+
+
+
+        ]);
     }
 }

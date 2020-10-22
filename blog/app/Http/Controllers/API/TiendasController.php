@@ -28,16 +28,16 @@ class TiendasController extends Controller
 
 
     }
-   
-    public function actualizar(Request $request,$id){
-        $actualizar = Tiendas::find($id);
-        $actualizar->nombre = $request-> nombre;
-        $actualizar->save();
-        return response()->json(200);
+    public function editar(Request $request, $id){
+        $nota = Tiendas::find($id);
+        $nota->nombre = $request->nombre;
+        $nota->save();
+        return response()->json(["productos"=>Tiendas::all()],200);
     }
+
     public function eliminar($id){
-        $proel = Tienda::finOrFail($id);
-        $proel->eliminar();
+        $nota = Tiendas::find($id);
+        $nota->delete();
         return response()->json(["productos"=>Tiendas::all()],200);
     }
    
